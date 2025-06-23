@@ -1,10 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://f4ybkdvoq7mi"]
+[gd_scene load_steps=3 format=3 uid="uid://f4ybkdvoq7mi"]
 
-[ext_resource type="PackedScene" uid="uid://do654rwp5txj8" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://bsfmtoboeun04" path="res://scenes/key_listener.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://2cyiake10gad" path="res://scenes/falling_key.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
+
+[node name="KeyListeners" type="Node2D" parent="."]
+
+[node name="KeyListener_left" parent="KeyListeners" instance=ExtResource("1_uwrxv")]
+position = Vector2(-45, 80)
+frame = 3
+key_name = "button_left"
+
+[node name="KeyListener_up" parent="KeyListeners" instance=ExtResource("1_uwrxv")]
+position = Vector2(-15, 80)
+frame = 1
+key_name = "button_up"
+
+[node name="KeyListener_down" parent="KeyListeners" instance=ExtResource("1_uwrxv")]
+position = Vector2(15, 80)
+frame = 2
+key_name = "button_down"
+
+[node name="KeyListener_right" parent="KeyListeners" instance=ExtResource("1_uwrxv")]
+position = Vector2(45, 80)
+key_name = "button_right"
+
+[node name="FallingKeys" type="Node2D" parent="."]
+visible = false
+
+[node name="FallingKey_left" parent="FallingKeys" instance=ExtResource("2_yqjtg")]
+position = Vector2(-45, -150)
+frame = 7
+
+[node name="FallingKey_up" parent="FallingKeys" instance=ExtResource("2_yqjtg")]
+position = Vector2(-15, -150)
+frame = 5
+
+[node name="FallingKey_down" parent="FallingKeys" instance=ExtResource("2_yqjtg")]
+position = Vector2(15, -150)
+frame = 6
+
+[node name="FallingKey_right" parent="FallingKeys" instance=ExtResource("2_yqjtg")]
+position = Vector2(45, -150)

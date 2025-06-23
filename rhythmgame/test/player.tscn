@@ -1,7 +1,7 @@
 [gd_scene load_steps=70 format=3 uid="uid://do654rwp5txj8"]
 
 [ext_resource type="Texture2D" uid="uid://dvetxmkt3xgxn" path="res://assets/Sword_Idle_full.png" id="1_g2els"]
-[ext_resource type="Script" uid="uid://011c4jes8gpa" path="res://player.gd" id="1_qhqgy"]
+[ext_resource type="Script" uid="uid://011c4jes8gpa" path="res://test/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://c1q8wdghi4wu4" path="res://assets/Sword_Walk_full.png" id="2_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
