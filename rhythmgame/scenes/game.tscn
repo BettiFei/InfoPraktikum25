@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://f4ybkdvoq7mi"]
+[gd_scene load_steps=4 format=3 uid="uid://f4ybkdvoq7mi"]
 
 [ext_resource type="PackedScene" uid="uid://bsfmtoboeun04" path="res://scenes/key_listener.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://2cyiake10gad" path="res://scenes/falling_key.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://ckwl05jepuiub" path="res://scenes/game_ui.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D"]
+
+[node name="GameUI" parent="." instance=ExtResource("3_lnu2h")]
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -576.0
+offset_bottom = -324.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
