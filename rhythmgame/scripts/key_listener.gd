@@ -30,6 +30,9 @@ func _process(_delta):
 	# check that there is a FK
 	if falling_key_queue.size() > 0:
 		
+		print("falling_key_queue.size(): ", falling_key_queue.size())
+		print("has_passed: ", falling_key_queue.front().has_passed)
+		
 		# if FK has passed screen, remove from queue:
 		if falling_key_queue.front().has_passed:
 			falling_key_queue.pop_front()
@@ -45,6 +48,11 @@ func _process(_delta):
 		if Input.is_action_just_pressed(key_name):			
 			# get first FK of FK queue:
 			var key_to_pop = falling_key_queue.pop_front()
+			
+			print("key_to_pop: ", key_to_pop)
+			
+			if !key_to_pop:
+				return
 			
 			# get distance of FK from target area (KL):
 			var distance_from_pass = abs(key_to_pop.pass_threshold - key_to_pop.global_position.y)

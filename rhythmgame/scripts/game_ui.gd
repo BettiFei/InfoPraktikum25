@@ -1,6 +1,5 @@
 extends Control
 
-var score: int = 0
 var combo_count: int = 0
 
 func _ready():
@@ -11,8 +10,8 @@ func _ready():
 	ResetCombo()
 	
 func IncrementScore(incr: int):
-	score += incr
-	%ScoreLabel.text = str(score) + " pts "
+	Signals.score += incr
+	%ScoreLabel.text = str(Signals.score) + " pts "
 
 func IncrementCombo():
 	combo_count += 1

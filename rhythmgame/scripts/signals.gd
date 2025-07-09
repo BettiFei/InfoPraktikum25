@@ -1,5 +1,7 @@
 extends Node2D
 
+var score: int = 0
+
 signal IncrementScore(incr: int)
 
 signal IncrementCombo()
