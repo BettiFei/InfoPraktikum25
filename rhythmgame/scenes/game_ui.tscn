@@ -18,18 +18,36 @@ script = ExtResource("1_yubou")
 
 [node name="ScoreLabel" type="RichTextLabel" parent="CanvasLayer"]
 unique_name_in_owner = true
-offset_left = 16.0
-offset_top = 30.0
-offset_right = 217.0
-offset_bottom = 93.0
+modulate = Color(1.5, 1.5, 1.5, 1)
+offset_top = 12.0
+offset_right = 198.0
+offset_bottom = 75.0
 theme_override_colors/default_color = Color(0.505749, 0.0141237, 0.367362, 1)
-theme_override_colors/font_outline_color = Color(0.750356, 0.0575626, 0.55413, 1)
+theme_override_colors/font_outline_color = Color(0.983582, 0.555967, 0.811599, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_constants/outline_size = 14
 theme_override_constants/shadow_offset_y = 4
 theme_override_constants/shadow_offset_x = 2
 theme_override_fonts/normal_font = ExtResource("2_rns2u")
-theme_override_font_sizes/normal_font_size = 40
-text = "0 pts"
+theme_override_font_sizes/normal_font_size = 30
+text = "0 pts "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ComboCountLabel" type="RichTextLabel" parent="CanvasLayer"]
+unique_name_in_owner = true
+modulate = Color(1.5, 1.5, 1.5, 1)
+offset_top = 65.0
+offset_right = 198.0
+offset_bottom = 128.0
+theme_override_colors/default_color = Color(0.505749, 0.0141237, 0.367362, 1)
+theme_override_colors/font_outline_color = Color(0.984314, 0.556863, 0.811765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 2
+theme_override_fonts/normal_font = ExtResource("2_rns2u")
+theme_override_font_sizes/normal_font_size = 30
+text = "0x Combo "
 horizontal_alignment = 2
 vertical_alignment = 1

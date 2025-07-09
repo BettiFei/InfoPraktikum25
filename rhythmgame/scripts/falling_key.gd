@@ -6,7 +6,7 @@ var init_y_pos: float = -150
 
 # set to true when falling key has passed the allowed input frame
 var has_passed: bool = false
-var pass_threshold = 140.0
+var pass_threshold = 100.0
 
 func _init():
 	set_process(false)
@@ -25,5 +25,5 @@ func setup(target_x: float, target_frame: int):
 	frame = target_frame
 	set_process(true)
 
-func _on_destroy_timer_timeout() -> void:
-	queue_free()
+#func _on_destroy_timer_timeout() -> void:
+#	queue_free()
