@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs4bu7vkf0gc"]
+
+[ext_resource type="Texture2D" uid="uid://d2km7nujps46g" path="res://assets/background_stage.png" id="1_6e1uj"]
+[ext_resource type="Script" uid="uid://c0ca4a80fkemc" path="res://scripts/end_screen.gd" id="1_jc7ji"]
+[ext_resource type="FontFile" uid="uid://r54nafpiqdce" path="res://assets/DripOctober-vm0JA.ttf" id="2_jc7ji"]
+
+[node name="EndScreen" type="Node2D"]
+script = ExtResource("1_jc7ji")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.663)
+position = Vector2(578, 326)
+scale = Vector2(0.743151, 0.743151)
+texture = ExtResource("1_6e1uj")
+
+[node name="FinalScoreLabel" type="RichTextLabel" parent="."]
+modulate = Color(1.5, 1.5, 1.5, 1)
+offset_left = 389.0
+offset_top = 223.0
+offset_right = 789.0
+offset_bottom = 408.0
+theme_override_colors/default_color = Color(0.505749, 0.0141237, 0.367362, 1)
+theme_override_colors/font_outline_color = Color(0.983582, 0.555967, 0.811599, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 2
+theme_override_fonts/normal_font = ExtResource("2_jc7ji")
+theme_override_font_sizes/normal_font_size = 50
+text = "Final SCore:
+0 pts"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReplayButton" type="Button" parent="."]
+modulate = Color(1.5, 1.5, 1.5, 1)
+offset_left = 241.0
+offset_top = 467.0
+offset_right = 522.0
+offset_bottom = 543.0
+theme_override_colors/font_hover_color = Color(0.984314, 0.556863, 0.811765, 1)
+theme_override_colors/font_color = Color(0.505882, 0.0156863, 0.368627, 1)
+theme_override_colors/font_pressed_color = Color(0.267258, 0.00395695, 0.188371, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("2_jc7ji")
+theme_override_font_sizes/font_size = 30
+text = "REPLAY LEVEL"
+
+[node name="SelectionButton" type="Button" parent="."]
+modulate = Color(1.5, 1.5, 1.5, 1)
+offset_left = 645.0
+offset_top = 467.0
+offset_right = 926.0
+offset_bottom = 543.0
+theme_override_colors/font_hover_color = Color(0.984314, 0.556863, 0.811765, 1)
+theme_override_colors/font_color = Color(0.505882, 0.0156863, 0.368627, 1)
+theme_override_colors/font_pressed_color = Color(0.267258, 0.00395695, 0.188371, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("2_jc7ji")
+theme_override_font_sizes/font_size = 30
+text = "SELECT LEVEL"
+
+[connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="SelectionButton" to="." method="_on_selection_button_pressed"]

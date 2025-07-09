@@ -61,3 +61,5 @@ func spawn_falling_key(button_name: String, delay: float):
 func _on_music_player_finished() -> void:
 	if in_edit_mode:
 		print(fk_output_arr)
+	else:
+		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")

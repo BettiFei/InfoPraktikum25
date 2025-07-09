@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://h08ikxymbnw0"]
+
+[ext_resource type="Script" uid="uid://bno4s6k8qvdo7" path="res://scripts/start_screen.gd" id="1_he1sj"]
+[ext_resource type="Texture2D" uid="uid://d2km7nujps46g" path="res://assets/background_stage.png" id="2_r2jwc"]
+[ext_resource type="FontFile" uid="uid://r54nafpiqdce" path="res://assets/DripOctober-vm0JA.ttf" id="3_hm208"]
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_he1sj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.663)
+position = Vector2(578, 326)
+scale = Vector2(0.743151, 0.743151)
+texture = ExtResource("2_r2jwc")
+
+[node name="FinalScoreLabel" type="RichTextLabel" parent="."]
+modulate = Color(1.5, 1.5, 1.5, 1)
+offset_top = 210.0
+offset_right = 1150.0
+offset_bottom = 395.0
+theme_override_colors/default_color = Color(0.505749, 0.0141237, 0.367362, 1)
+theme_override_colors/font_outline_color = Color(0.983582, 0.555967, 0.811599, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_offset_x = 2
+theme_override_fonts/normal_font = ExtResource("3_hm208")
+theme_override_font_sizes/normal_font_size = 50
+text = "Bettys Super Cool Rhythm Game
+V0.1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LegendaryButton" type="Button" parent="."]
+modulate = Color(1.5, 1.5, 1.5, 1)
+offset_left = 439.0
+offset_top = 402.0
+offset_right = 720.0
+offset_bottom = 478.0
+theme_override_colors/font_hover_color = Color(0.984314, 0.556863, 0.811765, 1)
+theme_override_colors/font_color = Color(0.505882, 0.0156863, 0.368627, 1)
+theme_override_colors/font_pressed_color = Color(0.267258, 0.00395695, 0.188371, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_hm208")
+theme_override_font_sizes/font_size = 30
+text = "Play: Legendary"
+
+[node name="QuitButton" type="Button" parent="."]
+modulate = Color(1.5, 1.5, 1.5, 1)
+offset_left = 439.0
+offset_top = 494.0
+offset_right = 720.0
+offset_bottom = 570.0
+theme_override_colors/font_hover_color = Color(0.984314, 0.556863, 0.811765, 1)
+theme_override_colors/font_color = Color(0.505882, 0.0156863, 0.368627, 1)
+theme_override_colors/font_pressed_color = Color(0.267258, 0.00395695, 0.188371, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_hm208")
+theme_override_font_sizes/font_size = 30
+text = "Quit Game :("
+
+[connection signal="pressed" from="LegendaryButton" to="." method="_on_legendary_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
