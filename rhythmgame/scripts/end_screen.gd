@@ -2,7 +2,7 @@ extends Node2D
 
 
 func _ready() -> void:
-	$FinalScoreLabel.text = str("Your Score: \n", Signals.score)
+	$FinalScoreLabel.text = str("Your Score: \n", Signals.score, " pts")
 
 
 func _on_replay_button_pressed() -> void:
