@@ -46,7 +46,7 @@ func _process(_delta):
 			Signals.ResetCombo.emit()
 	
 		# if input is pressed, remove FK from queue and calculate distance from target area
-		if Input.is_action_just_pressed(key_name):			
+		if Input.is_action_just_pressed(key_name):
 			# get first FK of FK queue:
 			var key_to_pop = falling_key_queue.pop_front()
 			

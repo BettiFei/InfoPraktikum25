@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://hv3jrimmm81q"]
 
-[ext_resource type="Script" uid="uid://cxj384bq7h2ht" path="res://level_editor.gd" id="1_ci1mn"]
+[ext_resource type="Script" uid="uid://cxj384bq7h2ht" path="res://scripts/level_editor.gd" id="1_ci1mn"]
 [ext_resource type="FontFile" uid="uid://r54nafpiqdce" path="res://assets/DripOctober-vm0JA.ttf" id="2_1mfi1"]
 
 [node name="LevelEditor" type="Node2D"]
