@@ -24,14 +24,15 @@ func _ready():
 	Signals.CreateFallingKey.connect(create_falling_key)
 
 func _process(_delta):
+	
 	if Input.is_action_just_pressed(key_name):
 		Signals.KeyListenerPress.emit(key_name, frame)
 	
+	if Input.is_action_just_pressed("skip_to_end"):
+		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
+	
 	# check that there is a FK
 	if falling_key_queue.size() > 0:
-		
-		print("falling_key_queue.size(): ", falling_key_queue.size())
-		print("has_passed: ", falling_key_queue.front().has_passed)
 		
 		# if FK has passed screen, remove from queue:
 		if falling_key_queue.front().has_passed:
@@ -48,8 +49,6 @@ func _process(_delta):
 		if Input.is_action_just_pressed(key_name):			
 			# get first FK of FK queue:
 			var key_to_pop = falling_key_queue.pop_front()
-			
-			print("key_to_pop: ", key_to_pop)
 			
 			if !key_to_pop:
 				return

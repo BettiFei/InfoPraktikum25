@@ -3,6 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://brlh70u3nirt6" path="res://assets/fnf_arrows_spritesheet.png" id="1_64e6d"]
 [ext_resource type="Script" uid="uid://cjgvtka8d550q" path="res://scripts/key_listener.gd" id="2_64e6d"]
 
+[sub_resource type="Animation" id="Animation_1p72u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlowOverlay:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1.3, 1.3, 1.3, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_64e6d"]
 resource_name = "key_hit"
 length = 0.3
@@ -17,21 +32,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1.3, 1.3, 1.3, 1), Color(1.3, 1.3, 1.3, 1), Color(1.3, 1.3, 1.3, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_1p72u"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GlowOverlay:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1.3, 1.3, 1.3, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gbfo3"]
